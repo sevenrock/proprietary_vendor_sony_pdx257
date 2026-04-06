@@ -19,8 +19,13 @@ PRODUCT_COPY_FILES += \
     vendor/sony/pdx257/proprietary/odm/etc/customization/c999998/config.prop:$(TARGET_COPY_OUT_ODM)/etc/customization/c999998/config.prop \
     vendor/sony/pdx257/proprietary/odm/etc/customization/c999999/config.prop:$(TARGET_COPY_OUT_ODM)/etc/customization/c999999/config.prop \
     vendor/sony/pdx257/proprietary/odm/etc/init/taimport_vendor.rc:$(TARGET_COPY_OUT_ODM)/etc/init/taimport_vendor.rc \
+    vendor/sony/pdx257/proprietary/product/etc/asl/jp.co.sony.mc.camera.data.safety_elbe.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/asl/jp.co.sony.mc.camera.data.safety_elbe.xml \
     vendor/sony/pdx257/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
     vendor/sony/pdx257/proprietary/product/etc/permissions/jp.co.sony.mc.euiccmemoryreset.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/jp.co.sony.mc.euiccmemoryreset.xml \
+    vendor/sony/pdx257/proprietary/product/etc/permissions/privapp-permissions-camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera.xml \
+    vendor/sony/pdx257/proprietary/product/etc/sysconfig/preinstalled-package-app-metadata-camera3d_elbe.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-package-app-metadata-camera3d_elbe.xml \
+    vendor/sony/pdx257/proprietary/product/etc/sysconfig/preinstalled-package-app-metadata-camera_elbe.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-package-app-metadata-camera_elbe.xml \
+    vendor/sony/pdx257/proprietary/product/etc/sysconfig/sysconfig_camera_key_Screenshot.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/sysconfig_camera_key_Screenshot.xml \
     vendor/sony/pdx257/proprietary/system/etc/permissions/uimremoteclient.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/uimremoteclient.xml \
     vendor/sony/pdx257/proprietary/system/etc/permissions/uimremoteserver.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/uimremoteserver.xml \
     vendor/sony/pdx257/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
@@ -244,6 +249,11 @@ PRODUCT_COPY_FILES += \
     vendor/sony/pdx257/proprietary/vendor/etc/perf/targetsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetsysnodesconfigs.xml \
     vendor/sony/pdx257/proprietary/vendor/etc/perf/testcommonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/testcommonresourceconfigs.xml \
     vendor/sony/pdx257/proprietary/vendor/etc/perf/testtargetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/testtargetresourceconfigs.xml \
+    vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
+    vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
+    vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
+    vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     vendor/sony/pdx257/proprietary/vendor/etc/permissions/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     vendor/sony/pdx257/proprietary/vendor/etc/permissions/com.android.se.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.se.xml \
     vendor/sony/pdx257/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
@@ -1277,14 +1287,20 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-halimpl \
     vendor.qti.qccvndhal_aidl-V1-ndk \
     com.google.android.widevine.nonupdatable \
+    CameraExtensionsProxy \
     CACertService \
     CneApp \
     IWlanService \
     TimeService \
+    CameraAddonPermission \
+    CameraCommonPermission \
     uimremoteclient \
     uimremoteserver \
+    CameraCommon \
     EuiccGoogle \
     EuiccMemoryReset \
+    PanoramaCamera-Elbe \
+    SomcCamera-Elbe \
     ImsDataChannelService \
     QCC \
     QtiTelephonyService \
