@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "hardware/qcom-caf/sm8450-6.6",
+        "vendor/sony/elbe-common",
     ],
 }
 
@@ -19,10 +20,27 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libar-pal.so",
             ],
+            shared_libs: [
+                "libar-gsl",
+                "liblog",
+                "libexpat",
+                "liblx-osal",
+                "libaudioroute",
+                "libcutils",
+                "libagmclient",
+                "libtinyalsa",
+                "libtinycompress",
+                "libtsrvirtualizer",
+                "libaudioutils",
+                "libeffects",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
